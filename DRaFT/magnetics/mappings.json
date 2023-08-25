@@ -1,0 +1,184 @@
+{
+    "ids_properties/homogeneous_time": {
+        "MAP_TYPE": "VALUE",
+        "VALUE": 0
+    },
+    "ids_properties/creation_date": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "DRAFT_JSON",
+        "ARGS": {
+            "signal": "/metadata/creation_date"
+        }
+    },
+    "ids_properties/provider": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "DRAFT_JSON",
+        "ARGS": {
+            "signal": "/metadata/RO"
+        }
+    },
+    "flux_loop": {
+        "MAP_TYPE": "VALUE",
+        "VALUE": "{{ length(FLUX_LOOPS) }}"
+    },
+    "flux_loop[#]/name": {
+        "MAP_TYPE": "VALUE",
+        "VALUE": "{{ FLUX_LOOP_i }}"
+    },
+    "flux_loop[#]/identifier": {
+        "MAP_TYPE": "VALUE",
+        "VALUE": "FLUX_LOOP_{{ indices.0 }}"
+    },
+    "flux_loop[#]/type/name": {
+        "MAP_TYPE": "VALUE",
+        "VALUE": "toroidal"
+    },
+    "flux_loop[#]/type/index": {
+        "MAP_TYPE": "VALUE",
+        "VALUE": 1
+    },
+    "flux_loop[#]/type/description": {
+        "MAP_TYPE": "VALUE",
+        "VALUE": "Toroidal flux loop"
+    },
+    "flux_loop[#]/flux/data": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "DRAFT_JSON",
+        "ARGS": {
+            "signal": "/AFL/{{ FLUX_LOOP_i }}/flux/data"
+        }
+    },
+    "flux_loop[#]/flux/time": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "DRAFT_JSON",
+        "ARGS": {
+            "signal": "/AFL/{{ FLUX_LOOP_i }}/flux/time"
+        }
+    },
+    "flux_loop[#]/voltage/data": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "DRAFT_JSON",
+        "ARGS": {
+            "signal": "/AFL/{{ FLUX_LOOP_i }}/voltage/data"
+        }
+    },
+    "flux_loop[#]/voltage/time": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "DRAFT_JSON",
+        "ARGS": {
+            "signal": "/AFL/{{ FLUX_LOOP_i }}/voltage/time"
+        }
+    },
+    "flux_loop[#]/position": {
+        "MAP_TYPE": "DIMENSION",
+        "DIM_PROBE": "flux_loop[#]/position[#]/r"
+    },
+    "flux_loop[#]/position[#]/r": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "DRAFT_JSON",
+        "ARGS": {
+            "signal": "/AFL/{{ FLUX_LOOP_i }}/r/data"
+        }
+    },
+    "flux_loop[#]/position[#]/z": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "DRAFT_JSON",
+        "ARGS": {
+            "signal": "/AFL/{{ FLUX_LOOP_i }}/z/data"
+        }
+    },
+    "_flux_loop[#]/position[#]/area": {
+        "COMMENT": "Could be implemented later"
+    },
+    "b_field_pol_probe": {
+        "MAP_TYPE": "VALUE",
+        "VALUE": "{{ length(BPOL_PROBES) }}"
+    },
+    "b_field_pol_probe[#]/name": {
+        "MAP_TYPE": "VALUE",
+        "VALUE": "{{ BPOL_PROBE_i }}"
+    },
+    "b_field_pol_probe[#]/type/name": {
+        "MAP_TYPE": "VALUE",
+        "VALUE": "mirnov"
+    },
+    "b_field_pol_probe[#]/type/index": {
+        "MAP_TYPE": "VALUE",
+        "VALUE": 2
+    },
+    "b_field_pol_probe[#]/type/description": {
+        "MAP_TYPE": "VALUE",
+        "VALUE": "Mirnov Probe"
+    },
+    "b_field_pol_probe[#]/field/data": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "DRAFT_JSON",
+        "ARGS": {
+            "signal": "/APP/{{ BPOL_PROBE_i }}/field/data"
+        }
+    },
+    "b_field_pol_probe[#]/field/time": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "DRAFT_JSON",
+        "ARGS": {
+            "signal": "/APP/{{ BPOL_PROBE_i }}/field/time"
+        }
+    },
+    "b_field_pol_probe[#]/voltage/data": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "DRAFT_JSON",
+        "ARGS": {
+            "signal": "/APP/{{ BPOL_PROBE_i }}/voltage/data"
+        }
+    },
+    "b_field_pol_probe[#]/voltage/time": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "DRAFT_JSON",
+        "ARGS": {
+            "signal": "/APP/{{ BPOL_PROBE_i }}/voltage/time"
+        }
+    },
+    "b_field_pol_probe[#]/position/r": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "DRAFT_JSON",
+        "ARGS": {
+            "signal": "/APP/{{ BPOL_PROBE_i }}/r/data"
+        }
+    },
+    "b_field_pol_probe[#]/position/z": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "DRAFT_JSON",
+        "ARGS": {
+            "signal": "/APP/{{ BPOL_PROBE_i }}/z/data"
+        }
+    },
+    "b_field_pol_probe[#]/position/phi": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "DRAFT_JSON",
+        "ARGS": {
+            "signal": "/APP/{{ BPOL_PROBE_i }}/phi/data"
+        }
+    },
+    "ip": {
+        "MAP_TYPE": "VALUE",
+        "VALUE": 1
+    },
+    "ip[#]/data": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "DRAFT_JSON",
+        "ARGS": {
+            "signal": "/APC/plasma_current/data"
+        }
+    },
+    "ip[#]/time": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "DRAFT_JSON",
+        "ARGS": {
+            "signal": "/APC/plasma_current/time"
+        }
+    },
+    "ip/#/method_name": {
+        "MAP_TYPE": "VALUE",
+        "VALUE": "IP Rogowski measurement"
+    }
+}

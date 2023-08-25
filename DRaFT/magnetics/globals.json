@@ -1,0 +1,18 @@
+{
+    "Comment": "Add any variables in here that are needed by your mappings",
+    "Templating": "These can be used for substitution in the signal names",
+    "Hello": "World",
+    "UNIT_SF": 1000,
+    "DEG2RAD": "0.01745329",
+    "PF_COILS": ["PF_COIL_0_tnp", "PF_COIL_1_tgr", "PF_COIL_2_rel", "PF_COIL_3_lnq", "PF_COIL_4_ksn"],
+    "FLUX_LOOPS": ["FLUX_LOOP_0_nmr", "FLUX_LOOP_1_kvl", "FLUX_LOOP_2_utk", "FLUX_LOOP_3_hdo", "FLUX_LOOP_4_etw"],
+    "BPOL_PROBES": ["BPOL_PROBE_0_gsn", "BPOL_PROBE_1_dcs", "BPOL_PROBE_2_jyu", "BPOL_PROBE_3_cch", "BPOL_PROBE_4_fwk"],
+    "PLUGIN_ARGS": {
+        "DRAFT_JSON": {
+            "source": "{{ shot }}"
+        }
+    },
+    "FLUX_LOOP_i": "{{ at(FLUX_LOOPS, indices.0) }}",
+    "BPOL_PROBE_i": "{{ at(BPOL_PROBES, indices.0) }}",
+    "PF_COIL_i": "{{ at(PF_COILS, indices.0) }}"
+}

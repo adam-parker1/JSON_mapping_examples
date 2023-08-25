@@ -1,0 +1,95 @@
+{
+    "ids_properties/homogeneous_time": {
+        "MAP_TYPE": "VALUE",
+        "VALUE": 2
+    },
+    "global_quantities/ip": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "JETCPF_Reader",
+        "ARGS": {
+            "signal": "MAGN/IPLA"
+        }
+    },
+    "global_quantities/r0": {
+        "MAP_TYPE": "VALUE",
+        "VALUE": 2.96
+    },
+    "global_quantities/b0": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "JETCPF_Reader",
+        "ARGS": {
+            "signal": "MAGN/BVAC"
+        }
+    },
+    "global_quantities/q_95": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "JETCPF_Reader",
+        "ARGS": {
+            "signal": "EFIT/Q95"
+        }
+    },
+    "global_quantities/power_ohm": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "JETCPF_Reader",
+        "ARGS": {
+            "signal": "EFIT/POHM"
+        }
+    },
+    "boundary/elongation": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "JETCPF_Reader",
+        "ARGS": {
+            "signal": "EFIT/ELON"
+        }
+    },
+    "boundary/triangularity_upper": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "JETCPF_Reader",
+        "ARGS": {
+            "signal": "EFIT/TRIU"
+        }
+    },
+    "boundary/triangularity_lower": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "JETCPF_Reader",
+        "ARGS": {
+            "signal": "EFIT/TRIL"
+        }
+    },
+    "local/magnetics_axis/n_e": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "JETCPF_Reader",
+        "ARGS": {
+            "signal": "HRTX/NE0"
+        }
+    },
+    "local/magnetics_axis/t_e": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "JETCPF_Reader",
+        "ARGS": {
+            "signal": "HRTX/TE0"
+        }
+    },
+    "_local/magnetics_axis/p_e": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "JETCPF_Reader",
+        "ARGS": {
+            "signal": "HRTX/PE0"
+        },
+        "COMMENT": "No equivalent in the IDS"
+    },
+    "heating_current_drive/power_nbi": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "JETCPF_Reader",
+        "ARGS": {
+            "signal": "NBI/NBLM"
+        }
+    },
+    "heating_current_drive/power_ic": {
+        "MAP_TYPE": "PLUGIN",
+        "PLUGIN": "JETCPF_Reader",
+        "ARGS": {
+            "signal": "ICRH/PTOT"
+        }
+    }
+}
